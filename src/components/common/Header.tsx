@@ -8,6 +8,7 @@ import {
   SignOutButton,
   // UserButton,
 } from "@clerk/nextjs";
+import {dark} from '@clerk/themes'
 function Header() {
   return (
     <nav className="topbar">
@@ -38,8 +39,9 @@ function Header() {
         </div>
         <OrganizationSwitcher
           appearance={{
+            baseTheme: dark,
             elements: {
-              organizationSwitcherTrigger: "py-2 px-4",
+              organizationSwitcherTrigger: "py-2 px-4 text-light-1",
             },
           }}
         />

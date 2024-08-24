@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../globals.css";
 import {
@@ -36,7 +35,6 @@ export default function RootLayout({
           </main>
           <Footer/>
         </ClerkProvider>
-
       </body>
     </html>
   );
