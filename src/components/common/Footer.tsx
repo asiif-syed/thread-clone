@@ -1,7 +1,39 @@
-function Footer(){
-    return (
-        <h1>Footer</h1>
-    )
+"use client";
+
+import { sidebarLinks } from "@/constants";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+function Footer() {
+  const pathname = usePathname();
+
+  return (
+    <section className="bottombar">
+      <div className="bottombar_container">
+        {sidebarLinks.map((link) => {
+          const isActive =
+            link.route === pathname ||
+            (pathname.includes(link.route) && link.route.length > 1);
+          return (
+            <Link
+              href={link.route}
+              key={link.label}
+              className={`bottombar_link ${isActive ? "bg-primary-500" : ""}`}
+            >
+              <Image
+                src={link.imgURL}
+                alt={link.label}
+                width={24}
+                height={24}
+              />
+              <p className="text-light-1 text-subtle-medium max-sm:hidden">{link.label.split(" ")[0]}</p>
+            </Link>
+          );
+        })}
+      </div>
+    </section>
+  );
 }
 
-export default Footer
+export default Footer;

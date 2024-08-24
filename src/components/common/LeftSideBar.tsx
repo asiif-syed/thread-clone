@@ -2,11 +2,10 @@
 import { sidebarLinks } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { SignedIn, SignOutButton } from "@clerk/nextjs";
 function LeftSideBar() {
   const pathname = usePathname();
-  const router = useRouter();
   return (
     <section className="custom-scrollbar leftsidebar">
       <div className="flex w-full flex-1 flex-col gap-6 px-6">
