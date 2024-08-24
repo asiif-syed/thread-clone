@@ -21,7 +21,6 @@ function Header() {
       <div className="flex items-center gap-1">
         <div className="block md:hidden">
           <SignedIn>
-            {/* <UserButton /> */}
             <SignOutButton>
               <div className="flex cursor-pointer">
                 <Image
@@ -44,6 +43,7 @@ function Header() {
             },
           }}
         />
+        {/* <UserButton /> */}
       </div>
     </nav>
   );

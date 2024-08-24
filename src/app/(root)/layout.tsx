@@ -2,11 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../globals.css";
 import {
-  ClerkProvider,
-  // SignedIn,
-  // SignedOut,
-  // SignInButton,
-  // UserButton,
+  ClerkProvider
 } from "@clerk/nextjs";
 import Header from "@/components/common/Header"
 import LeftSideBar from "@/components/common/LeftSideBar"
@@ -19,18 +15,6 @@ export const metadata = {
   title: "Threads Clone",
   description: "A Threads clone application build with Next.js",
 };
-
-
-// function Header() {
-//   return (
-//     <header
-//       style={{ display: "flex", justifyContent: "space-between", padding: 20 }}
-//     >
-//       <h1>My App</h1>
-
-//     </header>
-//   );
-// }
 
 
 export default function RootLayout({
